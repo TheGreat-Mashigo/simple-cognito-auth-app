@@ -20,6 +20,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "crypto-js/hmac-sha256",
+              "crypto-js/lib-typedarrays",
+              "crypto-js/sha256",
+              "buffer",
+              "crypto-js/core",
+              "isomorphic-unfetch",
+              "crypto-js/enc-base64"
+           ],
             "outputPath": "dist/simple-login-app",
             "index": "src/index.html",
             "main": "src/main.ts",
