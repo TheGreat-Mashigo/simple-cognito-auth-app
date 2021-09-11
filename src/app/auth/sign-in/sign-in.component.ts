@@ -24,6 +24,8 @@ export class SignInComponent implements OnInit {
 
   onSignIn(form: NgForm) {
     if (form.valid) {
+      console.log(form);
+
       this.isLoading = true;
       let authenticationDetails = new AuthenticationDetails({
         Username: this.email_address,

@@ -1,27 +1,59 @@
-<form (submit)="onSignIn(signInForm)" #signInForm="ngForm">
-  <label for="email"><b>Email address</b></label>
-  <input
-    name="email"
-    ngModel
-    type="email"
-    #emailInput="ngModel"
-    [(ngModel)]="email_address"
-    email
-    placeholder="Enter Username"
-    required
-  />
+<!-- <div class="container"> -->
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="mat-card-pos mat-login-form">
+    <mat-card-title color="accent">Login</mat-card-title>
+    <mat-card-content>
+      <form>
+        <mat-form-field>
+          <mat-label>Input</mat-label>
+          <input
+            matInput
+            placeholder="username"
+            ng-model="data.username"
+            type="username"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="E-mail"
+            ng-model="data.email"
+            type="email"
+          />
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+<!-- </div> -->
+<!-- <div class="col-12 col-xl-5 col-lg-4 col-md-7 col-sm-12">
+      <form (submit)="onSignIn(signInForm)" #signInForm="ngForm">
+        <label for="email"><b>Email address</b></label>
+        <input
+          name="email"
+          ngModel
+          type="email"
+          #emailInput="ngModel"
+          [(ngModel)]="email_address"
+          email
+          placeholder="Enter Username"
+          required
+        />
 
-  <label for="password"><b>Password</b></label>
-  <input
-    [(ngModel)]="password"
-    ngModel
-    type="password"
-    minlength="8"
-    #passwordInput="ngModel"
-    required
-    name="password"
-    placeholder="Enter Password"
-  />
+        <label for="password"><b>Password</b></label>
+        <input
+          [(ngModel)]="password"
+          ngModel
+          type="password"
+          minlength="8"
+          #passwordInput="ngModel"
+          required
+          name="password"
+          placeholder="Enter Password"
+        />
 
-  <button type="submit">Login</button>
-</form>
+        <button type="submit">Login</button>
+      </form>
+    </div> -->
+<!-- </div>
+</div> -->
